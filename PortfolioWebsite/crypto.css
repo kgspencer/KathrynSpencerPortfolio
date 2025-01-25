@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "Standard";
+  src: url('font/standard-book.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Standard";
+  src: url('font/standard-bold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Standard";
+  src: url('font/standard-book-italic.otf') format('otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Standard";
+  src: url('font/standard-bold-italic.otf') format('otf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: #e7dcd3;
+  color: #ee7d36;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+#name {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+h1 {
+  font-family: "Standard";
+  font-size: 50px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+h1 a {
+  color: #ee7d36;
+  text-decoration: none;
+}
+
+#cursor {
+  width: 3px;
+  height: 60px;
+  background-color: #ee7d36;
+  margin-left: 12px;
+  animation-name: blink;
+  animation-duration: 1.3s;
+  animation-timing-function: step-start;
+  animation-delay: 0.1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  50% {opacity: 0;}
+}
+
+nav {
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15%;
+  padding-left: 100px;
+}
+
+nav > a {
+  font-family: "Standard";
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: #ee7d36;
+  text-decoration: none;
+  white-space: nowrap;
+  padding-bottom: 3px;
+}
+
+nav > a.underlined {
+  border-bottom: 2px solid;
+}
+
+h2 {
+  padding-top: 10px;
+  font-size: 90px;
+  color: #b24d0e;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+}
+
+#howToBtn, #gameBtn {
+  color: #b24d0e;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 25px;
+  text-align: left;
+  margin-bottom: 30px;
+  padding: 5px 10px 5px 10px;
+  border: #b24d0e, solid;
+}
+
+#howTo {
+  color: #b24d0e;
+  display: flex;
+  flex-direction: column;
+  margin-left: 75px;
+  margin-right: 75px;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+#howToBtn:hover, #gameBtn:hover {
+  cursor: grab;
+}
+
+#signature {
+  padding-left: 48px;
+  margin-top: 0;
+}
+
+#howTo div {
+  display: flex;
+}
+
+#howTo .ex {
+  margin-left: 50px;
+  margin-top: 18px;
+  font-size: 40px;
+  border: 4px dotted #ffede2;
+  border-radius: 4px;
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+  height: fit-content;
+}
+
+#timer {
+  margin-top: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 25;
+}
+
+#cryptoQuip {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#cryptoQuip button {
+  background: none;
+  color: #ee7d36;
+  border: none;
+  padding: 5px;
+  font-size: 25px;
+  width: fit-content;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+#selected {
+  font-weight: 700;
+}
+
+#error {
+  margin: 35px;
+}
+
+#testBtn, #back {
+  padding: 20px;
+  background-color: #b24d0e;
+  color: #ffede2;
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  font-family: 'Sora', sans-serif !important;
+  font-weight: 300;
+}
+
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0px;
+  margin: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.keysRow {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.keysRow button {
+  background-color: #b24d0e;
+  color: #ffede2;
+  border: none;
+  border-radius: 4px;
+  height: 60px;
+  width: 45px;
+  font-size: 18px;
+}
+
+li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#results {
+  font-size: 18px;
+  font-weight: 700;
+  color: #b24d0e;
+  margin-top: 52px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid #b24d0e;
+  border-radius: 4px;
+  width: fit-content;
+  padding: 50px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.bright {
+  color: white !important;
+}
+
+.locked {
+  color: #b24d0e !important;
+}

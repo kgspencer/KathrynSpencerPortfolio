@@ -1,0 +1,41 @@
+@import "portfolio.css";
+
+@font-face {
+  font-family: "Fixedsys";
+  src: url('font/fsex300-webfont.ttf') format('truetype');
+}
+
+header, nav > a, h1 a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  background-color: #2921AF;
+  color: white;
+}
+
+#cursor {
+  background-color: rgba(255, 255, 255, 0.5);;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+main, button {
+  font-family: "Fixedsys";
+}
+
+#poemBtn {
+  font-size: 24px;
+}
+
+#poem {
+  margin-top: 30px;
+}
+
+#poem p {
+  font-size: 26px;
+  line-height: normal;
+  margin: 10px 10px 10px 0px;
+}

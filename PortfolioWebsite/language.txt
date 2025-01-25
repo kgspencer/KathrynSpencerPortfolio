@@ -1,0 +1,16 @@
+<sentence>::=<nounp> <verbp>|<pronoun> <intransverb> <conj> <nounp> <verbp>|<conj> <pronoun> <intransverb>|<posadj> <noun> <verbp>|<pronoun> <transverb> <posadj> <person>|<adj> <thing>|<presverb> <det> <thing>
+<nounp>::=<det> <noun>|<det> <adj> <noun>
+<adj>::=large|dead|wine-dark|golden|young|curt|brazen|rough|tired|sad|quiet|loud|warm|cold|lukewarm|small|clumsy|great|little|brave|blurry|hoarse|painful|gorgeous|tender|pitiful|beached
+<det>::=the|a
+<noun>::=<person>|<thing>|<animal>
+<person>::=mother|father|son|daughter|child|boy|girl|painter|cousin|brother|sister
+<thing>::=table|cup|straw|house|lake|river|night|knife
+<animal>::=dog|mare|horse|bull|ox|rabbit|fox|whale|fish
+<verbp>::=<transverb> <nounp>|<intransverb>|<modal> <presverb>
+<transverb>::=taught|honored|found|helped|caught|called|lost
+<intransverb>::=died|collapsed|laughed|wept|straightened|jumped|laughed|whispered|fell|dreamt|burned|stood|awoke|ate|drank|ran|left|dreamed
+<presverb>::=cry|fall|jump|lift|see|know|leave|push|pull|believe|rust|hurry|slip|laugh|count|march|feel|stand|watch|call
+<modal>::=must|will|can|couldn't|may|can't
+<pronoun>::=you|I|he|they|she|we
+<conj>::=while|and|but|after|when|though
+<posadj>::=your|his|my|her|our|their|the|a
