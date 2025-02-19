@@ -28,47 +28,25 @@
       </ul>
     </section>
     <section id="howTo" class="hidden">
-      <p>
-        This game is meant to mimic the classic Cryoptoquip game. The given phrase is encrypted
-        with a letter substitution cipher. The goal is to decode the phrase by figuring out which
-        letter each encrypted letter represents.
-      </p>
+      <h3>
+        Decode the encrypted phrase.
+      </h3>
+      <ul>
+        <li>Each letter stands for another.</li>
+        <li>The color of a letter will change once you've swapped that letter.</li>
+        <li>You can swap letters as many times as you'd like, but never to a letter
+          that has already been swapped.
+        </li>
+      </ul>
+      <h4>Examples</h4>
       <div>
-        <p>
-          Hovering over a letter will highlight each same letter, so you can see the placements of
-          each character. Clicking on a letter will <strong>select</strong> it. It will look like this:
-        </p>
         <p class="ex">Q</p>
+        <p class="case">This letter is currently moused over and hasn't been swapped yet.</p>
       </div>
       <div>
-        <p>
-          To swap a letter, you can choose a letter from the keyboard. Once a letter from the phrase
-          and the keyboard have been selected, the phrase letter will become <strong>locked</strong>.
-          You can still swap a locked letter, but it will not appear highlighted anymore
-          when you hover over it. Once locked, the letter will look like this:
-        </p>
         <p class="ex locked">Q</p>
+        <p class="case">This letter has been swapped.</p>
       </div>
-      <div>
-        <p>
-          When you think you've solved the phrase, you can <strong>test</strong> your answer using the Check Answer
-          button.
-        </p>
-      </div>
-      <article>
-        <p>Notes:</p>
-          <ul>
-            <li>The timer will start once you have swapped your first letter.</li>
-            <li>The 'Selected Letter' on screen refers to the <i>phrase</i> letter you have selected. It is
-            useful if you're swapping a locked letter.</li>
-            <li>You cannot swap a letter that has already been swapped. Try swapping the desired letter with
-            a different one first.</li>
-            <li>The order in which you select a phrase letter and keyboard letter should not matter. Note that
-            if you choose from the keyboard first, the phrase letter will be locked upon clicking it.</li>
-            <li>You shouldn't be able to swap any punctuation or spaces, and their appearance shouldn't change.</li>
-          </ul>
-        </p>
-      </article>
     </section>
     <section id="daily">
       <section id="cryptoQuip"></section>
