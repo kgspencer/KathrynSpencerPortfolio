@@ -1,27 +1,35 @@
 @font-face {
   font-family: "Standard";
-  src: url('font/standard-book.otf') format('otf');
   font-weight: normal;
   font-style: normal;
+  src: url('font/standard-book.otf') format('otf'),
+       url('font/standard-book-webfont.woff') format('woff'),
+       url('font/standard-book-webfont.woff2') format('woff2');
 }
 
 @font-face {
   font-family: "Standard";
-  src: url('font/standard-bold.otf') format('otf');
+  src: url('font/standard-bold.otf') format('otf'),
+       url('font/standard-bold-webfont.woff') format('woff'),
+       url('font/standard-bold-webfont.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Standard";
-  src: url('font/standard-book-italic.otf') format('otf');
+  src: url('font/standard-book-italic.otf') format('otf'),
+       url('font/standard-book-italic-webfont.woff') format('woff'),
+       url('font/standard-book-italic-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Standard";
-  src: url('font/standard-bold-italic.otf') format('otf');
+  src: url('font/standard-bold-italic.otf') format('otf'),
+       url('font/standard-bold-italic-webfont.woff') format('woff'),
+       url('font/standard-bold-italic-webfont.woff2') format('woff2');
   font-weight: bold;
   font-style: italic;
 }
