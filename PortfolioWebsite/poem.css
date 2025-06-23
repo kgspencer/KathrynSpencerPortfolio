@@ -39,3 +39,18 @@ main, button {
   line-height: normal;
   margin: 10px 10px 10px 0px;
 }
+
+#poemExplanation {
+  font-family: Standard;
+  font-style: italic;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0px 0px 20px 0px;
+  background-color: #2921AF;
+}
+
+#poemExplanation p {
+  margin: 0px;
+}

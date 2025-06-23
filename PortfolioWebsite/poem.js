@@ -97,14 +97,14 @@
   }
 
   function processLanguage() {
-    langLines.push("<sentence>::=<nounp> <verbp>|<pronoun> <intransverb> <conj> <nounp> <verbp>|<conj> <pronoun> <intransverb>|<posadj> <noun> <verbp>|<pronoun> <transverb> <posadj> <person>|<adj> <thing>|<presverb> <det> <thing>");
+    langLines.push("<sentence>::=<nounp> <verbp>|<pronoun> <intransverb> <conj> <nounp> <verbp>|<conj> <pronoun> <intransverb>|<posadj> <noun> <verbp>|<pronoun> <transverb> <posadj> <person>|<adj> <thing>|<presverb> <det> <thing>|<conj> <pronoun> <intransverb>|<pronoun> <modal> <presverb>|<pronoun> <intransverb> <conj> <posadj> <person> <intransverb>");
     langLines.push("<nounp>::=<det> <noun>|<det> <adj> <noun>");
-    langLines.push("<adj>::=large|dead|wine-dark|golden|young|curt|brazen|rough|tired|sad|quiet|loud|warm|cold|lukewarm|small|clumsy|great|little|brave|blurry|hoarse|painful|gorgeous|tender|pitiful|beached");
+    langLines.push("<adj>::=gaunt|ambivalent|large|dead|wine-dark|golden|young|curt|brazen|rough|tired|sad|quiet|loud|warm|cold|lukewarm|small|clumsy|great|little|brave|blurry|hoarse|painful|gorgeous|tender|pitiful|beached");
     langLines.push("<det>::=the|a");
     langLines.push("<noun>::=<person>|<thing>|<animal>");
-    langLines.push("<person>::=mother|father|son|daughter|child|boy|girl|painter|cousin|brother|sister");
-    langLines.push("<thing>::=table|cup|straw|house|lake|river|night|knife|flower|plate|coin");
-    langLines.push("<animal>::=dog|mare|horse|bull|ox|rabbit|fox|whale|fish");
+    langLines.push("<person>::=mother|father|son|daughter|child|boy|girl|writer|maker|sailor|cousin|brother|sister");
+    langLines.push("<thing>::=day|limb|family|creed|story|finger|table|cup|straw|house|lake|river|ocean|body|forest|night|knife|flower|plate|coin");
+    langLines.push("<animal>::=lamb|sheep|ram|fly|dog|mare|horse|bull|ox|rabbit|fox|whale|fish");
     langLines.push("<verbp>::=<transverb> <nounp>|<intransverb>|<modal> <presverb>");
     langLines.push("<transverb>::=taught|honored|found|helped|caught|called|lost");
     langLines.push("<intransverb>::=died|collapsed|laughed|wept|straightened|jumped|laughed|whispered|fell|dreamt|burned|stood|awoke|ate|drank|ran|left|dreamed");
