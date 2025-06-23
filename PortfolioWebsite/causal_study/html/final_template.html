@@ -1,0 +1,1152 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dam Removal and Salmon Spawning Rates &#8212; Dam Removal and Salmon Spawning Rates</title>
+
+
+
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'final_template';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+
+
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+
+
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  <div id="pst-scroll-pixel-helper"></div>
+
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+
+  <dialog id="pst-search-dialog">
+
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+
+
+
+
+
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+
+
+
+  <div class="sidebar-header-items sidebar-primary__section">
+
+
+
+
+  </div>
+
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+
+
+<a class="navbar-brand logo" href="#">
+
+
+
+
+
+
+    <p class="title logo__title">Dam Removal and Salmon Spawning Rates</p>
+
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Dam Removal and Salmon Spawning Rates
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav></div>
+    </div>
+
+
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+
+      <main id="main-content" class="bd-main" role="main">
+
+
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+
+    <div class="header-article-items__start">
+
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+
+    </div>
+
+
+    <div class="header-article-items__end">
+
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+
+
+
+      <li><a href="_sources/final_template.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+
+
+
+
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+
+    </div>
+
+</div>
+</div>
+
+
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dam Removal and Salmon Spawning Rates</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Dam Removal and Salmon Spawning Rates</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-knowledge">Prior Knowledge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-question">Causal question</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-was-the-effect-of-condit-dam-s-removal-on-the-size-of-the-white-salmon-river-s-salmon-population">What was the effect of Condit Dam’s Removal on the size of the White Salmon River’s salmon population?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#design">Design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-strategy">Study strategy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">Assumptions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#covariates">Covariates</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation">Estimation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-cleaning-dataset">Importing and Cleaning Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-parallel-trends">Visualizing Parallel Trends</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diff-in-diff-estimates">Diff-in-Diff Estimates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear Regression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-results">Linear Regression Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-way-fixed-effects-model">Two-Way Fixed Effects Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-way-fixed-effects-regression-results">Two-Way Fixed Effects Regression Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">Interpretation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="searchbox"></div>
+                <article class="bd-article">
+
+  <section class="tex2jax_ignore mathjax_ignore" id="dam-removal-and-salmon-spawning-rates">
+<span id="final-template"></span><h1>Dam Removal and Salmon Spawning Rates<a class="headerlink" href="#dam-removal-and-salmon-spawning-rates" title="Link to this heading">#</a></h1>
+<p><img alt="" src="_images/conditdam.png" />
+<strong>The White Salmon River before and after Condit Dam’s removal</strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="prior-knowledge">
+<h1>Prior Knowledge<a class="headerlink" href="#prior-knowledge" title="Link to this heading">#</a></h1>
+<p>In the past few decades, the United States has seen a dramatic increase in the number of dam removals. Dams are removed for a variety of reasons, including safety, cost, and loss of function as dams reach the end of their engineered lifecycles. Additionally, as we’ve learned more about the ecological effects of dam construction and maintenance, the recovery of ecosystem function has become a pertinent goal accross dam removals (Bellmore et al. 2019).</p>
+<p>The removal of Condit Dam is an important case study on the effects of dam removals on surrounding landscapes. Located on the White Salmon River in southwest Washington State, the dam was removed in 2011 and was the largest dam removal in the United States at the time. It released 180,000 m<sup>3</sup> of impounded sediment, the largest volume ever released in the US by breaching a dam with explosives. (Allen et al. 2016). The White Salmon River is an important salmon habitat and has historically been integral to salmon hatchery programs in the Columbia River Gorge. The health of its salmon populations are especially important to the physical, spiritual, and cultural nourishment of the Yakama Nation (“White Salmon River”, <em>American Rivers</em>).</p>
+<p>Today, salmon have returned to upstream spawning grounds on the White Salmon River. Their recovery is in part due to the White Salmon Working Group (WSWG), a conservation group formed in 2006 to assess fish populations and develop a plan to mitigate the effects of the dam’s removal. The WSWG relocated Chinook salmon and allowed other species to naturally recolonize, which led to the repopulation and recolonization of salmon accross species following the removal.</p>
+<p>Another river in southwest Washington, the Lewis river still currently has a dam (four, actually). Its facilities deny access to traditional spawning habitat for a majority of adult Lower Columbia River salmon and prevent juvenile salmon from migrating to the ocean (“Lewis River”, <em>American Rivers</em>). Its ecological makeup is comparable to the White Salmon River pre dam removal, from its native salmon species to its winding rapids.</p>
+<p>Dam removals have historically been regarded as reversing the negative effects of dam construction. However, the reality isn’t that simple. Ecological response trajectories post dam removal may be more complicated than a simple linear healing period in which the river and surrounding ecosystem gradually returns to what it looked like prior to construction. In fact, new ecologic conditions may not resemble the predam conditions, even as the river heals (Bellmore et al. 2019).</p>
+<p>There are important differences in ecological response trajectories between locations relative to the removed dam. We see a general movement of organisms upstream of the former reservoir, where they tend to recolonize or initially colonize new habitats. Dam removal may also facilitate the spread of invasive species upstream, so the native species may be pushed out. Within the former reservoir, major physical and hydrologic changes trigger large ecological responses. Lotic fish species (those which prefer flowing rivers to static environments) may repopulate. Downstream, the effects of released sediment create an unstable streambed not suitable for many species. Here, where living conditions are generally worst following the removal, lowered fish abundance may persist as long as 15 years before populations increase again. All three domains interact with each other, creating dynamic trajectories which indicate the complexity of ecological regrowth (Bellmore et al. 2019).</p>
+<p>Given the central position of salmon in the White Salmon River’s ecosystem and the magnitude of Condit Dam’s removal, it is important we understand how the removal affected salmon populations. We must consider how dynamic healing trajectories might complicate narratives about healing post dam removal.</p>
+<a class="bg-primary reference internal image-reference" href="_images/rivermap.png"><img alt="Map of rivers in southwest Washington" class="bg-primary align-center" src="_images/rivermap.png" style="width: 600px;" /></a>
+<p><strong>Location of the White Salmon River and Lewis River in southwest Washington State</strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="causal-question">
+<h1>Causal question<a class="headerlink" href="#causal-question" title="Link to this heading">#</a></h1>
+<section id="what-was-the-effect-of-condit-dam-s-removal-on-the-size-of-the-white-salmon-river-s-salmon-population">
+<h2>What was the effect of Condit Dam’s Removal on the size of the White Salmon River’s salmon population?<a class="headerlink" href="#what-was-the-effect-of-condit-dam-s-removal-on-the-size-of-the-white-salmon-river-s-salmon-population" title="Link to this heading">#</a></h2>
+<p><strong>Causal Quantity: ATT</strong>
+$<span class="math notranslate nohighlight">\(E[Y(1) - Y(0) | T=1]\)</span>$</p>
+<p>In this case, the treatment effect among the treated (the salmon directly affected by the removal of Condit Dam) is most relevant. Particularly since dam removals are so specific to the unique environmental and architectural conditions of each dam, it is more impactful to consider how this dam removal affected its local salmon populations than to consider the difference between salmon of affected and unaffected rivers.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="design">
+<h1>Design<a class="headerlink" href="#design" title="Link to this heading">#</a></h1>
+<section id="study-strategy">
+<h2>Study strategy<a class="headerlink" href="#study-strategy" title="Link to this heading">#</a></h2>
+<p>The following study is a difference-in-differences quasi experiment. These experiments look at the difference in outcomes between a treatment and control group before and after a chance event. My treatment group will be the White Salmon River, where the dam was removed, and my control group will be Lewis River, whose salmon populations are still affected by dams.</p>
+<section id="assumptions">
+<h3>Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Consistency: Since all salmon in the treated group are affected by the same chance event (the removal of Condit Dam), there is only realistically one version of the treatment. Therefore, the observed outcomes will reflect the hypothetical outcomes.</p></li>
+<li><p>No interference: In an ecosystem, any event may have effects that ripple outwards to other parts of the system. However, since the rivers with treatment and control salmon are not directly connected, I think it is fair to say that the no interference assumption holds. Additionally, salmon that migrate due to dam removal tend to travel upstream away from released sediment, and they would have to travel downstream from the White Salmon River to reach Lewis River.</p></li>
+<li><p>Parallel trends: Based on the graph below, I think it is reasonable to say that the parallel trends assumption holds. The graph has large error bars, which could mean that parallelism is increased <em>or</em> decreased in reality. However, the parallel trends of other rivers are vastly different, so I think it is fair to say that these ones are comparable. There are three confounders I identified that would affect the White Salmon River more than the Lewis river: sample location, infrastructural barriers, and the White Salmon Working Group (WSWG). Since dam removals have different effects at different points on the river, the location (which we cannot determine from the dataset) could differently affect the White Salmon River’s survey results. Infrastructural barriers like boundaries around the demolition zone would likely affect the sampling capabilities for the White Salmon River. The WSWG’s efforts at salmon relocation and conservation would only affect the treatment group.</p></li>
+</ol>
+<p><img alt="" src="_images/FinalDAG.png" /></p>
+</section>
+</section>
+<section id="covariates">
+<h2>Covariates<a class="headerlink" href="#covariates" title="Link to this heading">#</a></h2>
+<p><strong>Dataset: <a class="reference external" href="https://data.wa.gov/Natural-Resources-Environment/WDFW-SGS/idwx-fext/about_data">https://data.wa.gov/Natural-Resources-Environment/WDFW-SGS/idwx-fext/about_data</a></strong></p>
+<p>WDFW-SGS is a summary of live fish counts, dead fish counts, and redd (nest) counts stored in the Washington Department of Fish and Wildlife (WDFW) Spawning Ground Survey (SGS) database. It helps monitor the status and trends of Coastal, Puget Sound, and Columbia Basin salmonid stocks. To provide evidence of salmonid spawning activity, it records counts of adult fish and redds. Each sample has a unique survey ID, survey date, stream name, and run year and often includes species data. It more sparingly includes the estimated percent seen, dead total, and redd data. It has data going back to 1930 and is still updated daily.</p>
+<p><strong>Columns:</strong></p>
+<ul class="simple">
+<li><p>SurveyDate: Date when the survey was conducted</p></li>
+<li><p>StreamName: Name of the stream, river, or creek</p></li>
+<li><p>SpeciesAbbr: Salmon species, abbreviated</p></li>
+<li><p>Species: Salmon species</p></li>
+<li><p>RunYear: The corresponding salmon run year to when the sample was collected</p></li>
+<li><p>EstimatedPctSeen: From the surveyers own estimate at the percent of total salmon they accounted for</p></li>
+<li><p>LiveTotal: Number of alive adult salmon recorded</p></li>
+<li><p>DeadTotal: Number of dead adult salmon recorded</p></li>
+<li><p>NewReddCount: Number of redds (nests) not previously recorded</p></li>
+<li><p>PreviousReddCount: Number of redds (nests) previously recorded</p></li>
+<li><p>CombinedReddCount: Total number of redds (nests)</p></li>
+</ul>
+<p><strong>Treatment variable: StreamName</strong></p>
+<p><strong>Outcome variable: LiveTotal</strong></p>
+<p>Salmon counts are acquired through field work in seasonal surveys. Each sample includes the stream name, which I am using to categorize my treatment and control groups.</p>
+<p>As described in the parallel trends discussion, sample location, infrastructural barriers, and the WSWG’s efforts are three confounders that could affect the treatment and control groups differently. These confounders are not represented in the dataset. Environmental factors are another confounder, but are so difficult to measure that for my study I assume that the rivers are being affected similarly (this seems reasonable as they are both in Southwest Washington and have other similar characteristics).</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="estimation">
+<h1>Estimation<a class="headerlink" href="#estimation" title="Link to this heading">#</a></h1>
+<section id="importing-and-cleaning-dataset">
+<h2>Importing and Cleaning Dataset<a class="headerlink" href="#importing-and-cleaning-dataset" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.formula.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">smf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">linearmodels.panel</span><span class="w"> </span><span class="kn">import</span> <span class="n">PanelOLS</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import all possible columns we might need later</span>
+<span class="n">wdfw_og_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;~/comsc341cd.github.io/projects/wdfw.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">48</span><span class="p">])</span>
+
+<span class="c1"># Clean the dataframe</span>
+<span class="n">wdfw_og_df</span> <span class="o">=</span> <span class="n">wdfw_og_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;LiveTotal&quot;</span><span class="p">])</span>
+
+<span class="n">wdfw_og_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SurveyID</th>
+      <th>SurveyDate</th>
+      <th>WRIA</th>
+      <th>StreamCatalogCode</th>
+      <th>StreamName</th>
+      <th>SpeciesAbbr</th>
+      <th>Species</th>
+      <th>RunYear</th>
+      <th>EstimatedPctSeen</th>
+      <th>LiveTotal</th>
+      <th>DeadTotal</th>
+      <th>NewReddCount</th>
+      <th>PreviousReddCount</th>
+      <th>CombinedReddCount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>22</th>
+      <td>690180</td>
+      <td>10/10/2022</td>
+      <td>7</td>
+      <td>07.0060</td>
+      <td>Edgecomb Creek</td>
+      <td>COHO</td>
+      <td>Coho Salmon</td>
+      <td>2022.0</td>
+      <td>95.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>690186</td>
+      <td>10/14/2022</td>
+      <td>7</td>
+      <td>07.0940</td>
+      <td>Wallace River (RB)</td>
+      <td>CHIN</td>
+      <td>Chinook Salmon</td>
+      <td>2022.0</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>23.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>690187</td>
+      <td>09/23/2022</td>
+      <td>5</td>
+      <td>05.0001</td>
+      <td>Stillaguamish R. Cont. As S.F. Stillaguamish R...</td>
+      <td>CHIN</td>
+      <td>Chinook Salmon</td>
+      <td>2022.0</td>
+      <td>90.0</td>
+      <td>8.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>690188</td>
+      <td>09/29/2022</td>
+      <td>5</td>
+      <td>05.0062</td>
+      <td>Pilchuck Creek (RB)</td>
+      <td>CHIN</td>
+      <td>Chinook Salmon</td>
+      <td>2022.0</td>
+      <td>90.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>690189</td>
+      <td>09/13/2022</td>
+      <td>5</td>
+      <td>05.0001</td>
+      <td>Stillaguamish R. Cont. As S.F. Stillaguamish R...</td>
+      <td>CHIN</td>
+      <td>Chinook Salmon</td>
+      <td>2022.0</td>
+      <td>95.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract most important columns for our analysis</span>
+<span class="n">wdfw_df</span> <span class="o">=</span> <span class="n">wdfw_og_df</span><span class="p">[[</span><span class="s1">&#39;StreamName&#39;</span><span class="p">,</span> <span class="s1">&#39;SpeciesAbbr&#39;</span><span class="p">,</span> <span class="s1">&#39;RunYear&#39;</span><span class="p">,</span> <span class="s1">&#39;LiveTotal&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Select only the treatment and control rivers</span>
+<span class="n">wdfw_df</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="p">[(</span><span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;StreamName&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;WHITE SALMON River  29.0160&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;StreamName&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;LEWIS River -NF   27.0168&#39;</span><span class="p">)]</span>
+
+<span class="c1"># Restrict to a relevant time frame</span>
+<span class="n">wdfw_df</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="p">[</span><span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;RunYear&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2005</span><span class="p">]</span>
+
+<span class="c1"># Create post treatment binary column</span>
+<span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;post_treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;RunYear&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2011</span>
+<span class="c1"># Create treatment group binary column</span>
+<span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;is_whitesalmon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;StreamName&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;WHITE SALMON River  29.0160&#39;</span>
+<span class="c1"># Create treated column (sample is post treatment and in the treated group)</span>
+<span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;is_treated&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;post_treatment&#39;</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;is_whitesalmon&#39;</span><span class="p">]</span>
+
+<span class="n">wdfw_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>StreamName</th>
+      <th>SpeciesAbbr</th>
+      <th>RunYear</th>
+      <th>LiveTotal</th>
+      <th>post_treatment</th>
+      <th>is_whitesalmon</th>
+      <th>is_treated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15087</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>CHIN</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15088</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>CHUM</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15089</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>COHO</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15090</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>STHD</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15091</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>CHIN</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15092</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>CHUM</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15093</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>COHO</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15094</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>STHD</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15095</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>CHIN</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15096</th>
+      <td>WHITE SALMON River  29.0160</td>
+      <td>CHIN</td>
+      <td>2016.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="visualizing-parallel-trends">
+<h2>Visualizing Parallel Trends<a class="headerlink" href="#visualizing-parallel-trends" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restrict wdfw_df to pre treatment</span>
+<span class="n">wdfw_df_pre</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="p">[</span><span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;post_treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span>
+
+<span class="c1"># Plot an sns.pointplot using wdfw_df_pre of &#39;LiveTotal&#39; against &#39;RunYear&#39;, with &#39;StreamName&#39; as the hue</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">wdfw_df_pre</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;RunYear&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;LiveTotal&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;is_whitesalmon&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;# of Salmon by Run Year for Lewis and White Salmon Rivers&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Run Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;# of Salmon&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;# of Salmon&#39;)
+</pre></div>
+</div>
+<img alt="_images/7322bcaaabdb7591d4dc344e36922119efc1dd36c6e717cd107eebfff42b933c.png" src="_images/7322bcaaabdb7591d4dc344e36922119efc1dd36c6e717cd107eebfff42b933c.png" />
+</div>
+</div>
+</section>
+<section id="diff-in-diff-estimates">
+<h2>Diff-in-Diff Estimates<a class="headerlink" href="#diff-in-diff-estimates" title="Link to this heading">#</a></h2>
+<section id="linear-regression">
+<h3>Linear Regression<a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h3>
+<p><strong>General regression formula:</strong>
+$<span class="math notranslate nohighlight">\(
+Y = \beta_0 + \beta_1 (\text{treated group}) + \beta_2 (\text{after treatment}) + \beta_3 (\text{treated group} \times \text{after treatment}) + \epsilon
+\)</span>$</p>
+<p><strong>Specific regression formula for this study:</strong>
+$<span class="math notranslate nohighlight">\(
+Y = \beta_0 + \beta_1 (\text{is\_whitesalmon}) + \beta_2 (\text{post\_treatment}) + \beta_3 (\text{is\_treated}) + \epsilon
+\)</span><span class="math notranslate nohighlight">\(
+The ATT corresponds to \)</span>\beta_3$, which tells us how much larger the treated group effect is in the post-treatment period,
+compared to what it would have been in the pre-treatment period.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">formula</span> <span class="o">=</span> <span class="s1">&#39;LiveTotal ~ 1 + is_whitesalmon + post_treatment + is_treated&#39;</span>
+<span class="n">did_model</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">wdfw_df</span><span class="p">)</span>
+<span class="n">did_results</span> <span class="o">=</span> <span class="n">did_model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">did_results</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results
+==============================================================================
+Dep. Variable:              LiveTotal   R-squared:                       0.017
+Model:                            OLS   Adj. R-squared:                  0.016
+Method:                 Least Squares   F-statistic:                     49.67
+Date:                Sun, 11 May 2025   Prob (F-statistic):           8.01e-32
+Time:                        12:21:38   Log-Likelihood:                -48754.
+No. Observations:                8823   AIC:                         9.752e+04
+Df Residuals:                    8819   BIC:                         9.754e+04
+Df Model:                           3
+Covariance Type:            nonrobust
+==========================================================================================
+                             coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+Intercept                  6.9330      1.748      3.967      0.000       3.507      10.359
+is_whitesalmon[T.True]    47.0323      4.940      9.521      0.000      37.349      56.715
+post_treatment[T.True]    14.0089      2.381      5.883      0.000       9.341      18.677
+is_treated[T.True]       -60.4685      5.256    -11.504      0.000     -70.772     -50.165
+==============================================================================
+Omnibus:                    14825.505   Durbin-Watson:                   1.858
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):         13345795.789
+Skew:                          11.454   Prob(JB):                         0.00
+Kurtosis:                     192.151   Cond. No.                         19.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="linear-regression-results">
+<h3>Linear Regression Results<a class="headerlink" href="#linear-regression-results" title="Link to this heading">#</a></h3>
+<p><strong>ATT Point Estimate:</strong> -60.47<br />
+<strong>95% Confidence Interval:</strong> [-70.78, -50.17]</p>
+</section>
+</section>
+<section id="two-way-fixed-effects-model">
+<h2>Two-Way Fixed Effects Model<a class="headerlink" href="#two-way-fixed-effects-model" title="Link to this heading">#</a></h2>
+<p>Since ecological healing trajectories are often more dynamic than a linear model, a two-way fixed effects model that accounts for multiple time periods may more accurately reflect the effect on salmon populations and reduce variance in our estimate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new time column where the chance event is centered on 0 (2011 becomes 0)</span>
+<span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;time_centered&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;RunYear&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2011</span>
+
+<span class="c1"># Drop the 2013 rows from the data to account for colinearity</span>
+<span class="n">wdfw_df</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="p">[</span><span class="n">wdfw_df</span><span class="p">[</span><span class="s1">&#39;RunYear&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2013</span><span class="p">]</span>
+
+<span class="c1"># Set the index to be the[&#39;StreamName&#39;, &#39;RunYear&#39;] columns</span>
+<span class="n">wdfw_df</span> <span class="o">=</span> <span class="n">wdfw_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s2">&quot;StreamName&quot;</span><span class="p">,</span> <span class="s2">&quot;RunYear&quot;</span><span class="p">])</span>
+
+<span class="c1"># Use a two-way fixed effects model with time_centered*is_whitesalmon</span>
+<span class="c1"># formula = &#39;Y ~ EntityEffects + TimeEffects + C(time_centered)*treated_group&#39;</span>
+<span class="n">formula</span> <span class="o">=</span> <span class="s1">&#39;LiveTotal ~ EntityEffects + TimeEffects + C(time_centered)*is_whitesalmon&#39;</span>
+
+<span class="c1"># Fit the model with clustered standard errors and drop absorbed variables</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">PanelOLS</span><span class="o">.</span><span class="n">from_formula</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">wdfw_df</span><span class="p">,</span> <span class="n">drop_absorbed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cov_type</span><span class="o">=</span><span class="s1">&#39;clustered&#39;</span><span class="p">)</span>
+<span class="n">results</span><span class="o">.</span><span class="n">summary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2791639/2908860547.py:16: AbsorbingEffectWarning:
+Variables have been fully absorbed and have removed from the regression:
+
+C(time_centered)[-5.0], C(time_centered)[-4.0], C(time_centered)[-3.0], C(time_centered)[-2.0], C(time_centered)[-1.0], C(time_centered)[0.0], C(time_centered)[1.0], C(time_centered)[3.0], C(time_centered)[4.0], C(time_centered)[5.0], C(time_centered)[6.0], C(time_centered)[7.0], C(time_centered)[8.0], C(time_centered)[9.0], is_whitesalmon
+
+  results = model.fit(cov_type=&#39;clustered&#39;)
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>PanelOLS Estimation Summary</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>LiveTotal</td>    <th>  R-squared:         </th>     <td>0.0497</td>
+</tr>
+<tr>
+  <th>Estimator:</th>            <td>PanelOLS</td>     <th>  R-squared (Between):</th>    <td>-2344.7</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>       <td>8384</td>       <th>  R-squared (Within):</th>     <td>-100.11</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sun, May 11 2025</td> <th>  R-squared (Overall):</th>    <td>-104.32</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>12:21:38</td>     <th>  Log-likelihood     </th>   <td>-4.601e+04</td>
+</tr>
+<tr>
+  <th>Cov. Estimator:</th>       <td>Clustered</td>    <th>                     </th>        <td></td>
+</tr>
+<tr>
+  <th></th>                          <td></td>         <th>  F-statistic:       </th>     <td>31.208</td>
+</tr>
+<tr>
+  <th>Entities:</th>                 <td>2</td>        <th>  P-value            </th>     <td>0.0000</td>
+</tr>
+<tr>
+  <th>Avg Obs:</th>               <td>4192.0</td>      <th>  Distribution:      </th>   <td>F(14,8354)</td>
+</tr>
+<tr>
+  <th>Min Obs:</th>               <td>2621.0</td>      <th>                     </th>        <td></td>
+</tr>
+<tr>
+  <th>Max Obs:</th>               <td>5763.0</td>      <th>  F-statistic (robust):</th>   <td>21.950</td>
+</tr>
+<tr>
+  <th></th>                          <td></td>         <th>  P-value            </th>     <td>0.0000</td>
+</tr>
+<tr>
+  <th>Time periods:</th>            <td>15</td>        <th>  Distribution:      </th>   <td>F(14,8354)</td>
+</tr>
+<tr>
+  <th>Avg Obs:</th>               <td>558.93</td>      <th>                     </th>        <td></td>
+</tr>
+<tr>
+  <th>Min Obs:</th>               <td>53.000</td>      <th>                     </th>        <td></td>
+</tr>
+<tr>
+  <th>Max Obs:</th>               <td>1392.0</td>      <th>                     </th>        <td></td>
+</tr>
+<tr>
+  <th></th>                          <td></td>         <th>                     </th>        <td></td>
+</tr>
+</table>
+<table class="simpletable">
+<caption>Parameter Estimates</caption>
+<tr>
+                     <td></td>                     <th>Parameter</th> <th>Std. Err.</th> <th>T-stat</th>  <th>P-value</th> <th>Lower CI</th> <th>Upper CI</th>
+</tr>
+<tr>
+  <th>C(time_centered)[-6.0]</th>                   <td>4856.8</td>    <td>1239.3</td>   <td>3.9190</td>  <td>0.0001</td>   <td>2427.5</td>   <td>7286.2</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.-5.0]:is_whitesalmon</th>  <td>-54.258</td>   <td>29.700</td>   <td>-1.8268</td> <td>0.0678</td>   <td>-112.48</td>  <td>3.9620</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.-4.0]:is_whitesalmon</th>  <td>-33.635</td>   <td>33.022</td>   <td>-1.0186</td> <td>0.3084</td>   <td>-98.366</td>  <td>31.095</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.-3.0]:is_whitesalmon</th>  <td>-45.782</td>   <td>31.031</td>   <td>-1.4754</td> <td>0.1401</td>   <td>-106.61</td>  <td>15.046</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.-2.0]:is_whitesalmon</th>  <td>-32.130</td>   <td>32.396</td>   <td>-0.9918</td> <td>0.3213</td>   <td>-95.635</td>  <td>31.374</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.-1.0]:is_whitesalmon</th>  <td>-25.994</td>   <td>41.131</td>   <td>-0.6320</td> <td>0.5274</td>   <td>-106.62</td>  <td>54.634</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.0.0]:is_whitesalmon</th>   <td>-36.483</td>   <td>33.316</td>   <td>-1.0951</td> <td>0.2735</td>   <td>-101.79</td>  <td>28.824</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.1.0]:is_whitesalmon</th>   <td>-46.838</td>   <td>30.963</td>   <td>-1.5127</td> <td>0.1304</td>   <td>-107.53</td>  <td>13.856</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.3.0]:is_whitesalmon</th>   <td>-280.71</td>   <td>44.890</td>   <td>-6.2532</td> <td>0.0000</td>   <td>-368.70</td>  <td>-192.71</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.4.0]:is_whitesalmon</th>   <td>-92.647</td>   <td>30.224</td>   <td>-3.0654</td> <td>0.0022</td>   <td>-151.89</td>  <td>-33.401</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.5.0]:is_whitesalmon</th>   <td>-90.074</td>   <td>29.479</td>   <td>-3.0555</td> <td>0.0023</td>   <td>-147.86</td>  <td>-32.288</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.6.0]:is_whitesalmon</th>   <td>-82.641</td>   <td>28.984</td>   <td>-2.8512</td> <td>0.0044</td>   <td>-139.46</td>  <td>-25.825</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.7.0]:is_whitesalmon</th>   <td>-89.085</td>   <td>29.159</td>   <td>-3.0552</td> <td>0.0023</td>   <td>-146.24</td>  <td>-31.927</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.8.0]:is_whitesalmon</th>   <td>-83.339</td>   <td>29.206</td>   <td>-2.8535</td> <td>0.0043</td>   <td>-140.59</td>  <td>-26.089</td>
+</tr>
+<tr>
+  <th>C(time_centered)[T.9.0]:is_whitesalmon</th>   <td>-88.534</td>   <td>29.727</td>   <td>-2.9782</td> <td>0.0029</td>   <td>-146.81</td>  <td>-30.261</td>
+</tr>
+</table><br/><br/>F-test for Poolability: 40.843<br/>P-value: 0.0000<br/>Distribution: F(15,8354)<br/><br/>Included effects: Entity, Time</div></div>
+</div>
+<section id="two-way-fixed-effects-regression-results">
+<h3>Two-Way Fixed Effects Regression Results<a class="headerlink" href="#two-way-fixed-effects-regression-results" title="Link to this heading">#</a></h3>
+<p><strong>Post-treatment results (not including 2013 because Lewis River is missing that data):</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Year</p></th>
+<th class="head"><p>Point Estimate</p></th>
+<th class="head"><p>95% Confidence Interval</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2012</p></td>
+<td><p>-46.84</p></td>
+<td><p>[-107.79, 13.86]</p></td>
+</tr>
+<tr class="row-odd"><td><p>2014</p></td>
+<td><p>-280.71</p></td>
+<td><p>[-368.70, -192.71]</p></td>
+</tr>
+<tr class="row-even"><td><p>2015</p></td>
+<td><p>-92.65</p></td>
+<td><p>[-151.89, -33.40]</p></td>
+</tr>
+<tr class="row-odd"><td><p>2016</p></td>
+<td><p>-90.01</p></td>
+<td><p>[-147.86, -32.29]</p></td>
+</tr>
+<tr class="row-even"><td><p>2017</p></td>
+<td><p>-82.64</p></td>
+<td><p>[-139.46, -25.83]</p></td>
+</tr>
+<tr class="row-odd"><td><p>2018</p></td>
+<td><p>-89.01</p></td>
+<td><p>[-146.24, -31.93]</p></td>
+</tr>
+<tr class="row-even"><td><p>2019</p></td>
+<td><p>-83.34</p></td>
+<td><p>[-140.59, -26.01]</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020</p></td>
+<td><p>-88.53</p></td>
+<td><p>[-146.81, -30.26]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="interpretation">
+<h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading">#</a></h1>
+<p>The point estimate for the linear regression model suggests that the removal of Condit Dam decreased the size of White Salmon River’s population by about 60 compared to if trends had followed in the pre-treatment data. When we look at the two-way fixed effects regression results, we see a more complicated narrative of post-treatment effects. The 2012 estimate of roughly -47 is uniquely less negative than other post-treatment data. 2014 sees a significant decrease, however, with the point estimate being about -281. From there point estimates remain roughly around -87 from 2015 to 2020. All estimates have large confidence intervals, but the fact that the intervals do not overlap zero indicates strong statistical significance.The dramatic decrease in 2014, as well as the general decrease in the years 2015-2020, may also be significant.</p>
+<p>As this estimation used the ATT, the results apply to salmon in the White Salmon River following the removal of Condit Dam. These results are not generalizable to another population, though they may provide insight into dam removals and salmon spawning rates that could be useful in motivating studies elsewhere.</p>
+<p>There are many limitations on my study design and analysis. Missing data means that parallel trends and the estimates that depend on those trends may be inaccurate. The data also relies on the surveys from field work observation, which may involve natural human error. The Lewis River does not have data for 2013; the reason for this gap is not given in the dataset but may be related to the significant decrease in salmon population size in 2014. In general, ecological data is difficult to model. As Bellmore et al. note, ecological response trajectories including salmon spawn rates may be affected my multiple causal pathways and feedback loops (Bellmore et al. 2019, 4). Accurately modeling the effects of dam removal on salmon spawn rates will necessitate more complex models, and ideally more thorough data.</p>
+<p>The Condit Dam was removed in 2011, but we don’t see a significant decrease in fish populations until 2014. The WSWG attempted to promote Chinook salmon recolonization upstream of the removed dam. They found that in the year following the removal, salmon populations remained stable, but provided little analysis for the coming years (Allen et al. 2016, 200). The decrease in 2014 may be reflective of salmon populations struggling to recolonize different habitats long term. Overall, the data is inconclusive, but a surprising decrease three years after the removal indicates a need for more thorough long-term analysis of the effects of dam removals on salmon populations. Further studies should be done to inform future salmon conservation or relocation plans. Statistical analysis combined with expert ecological knowledge could help determine the best course of action for salmon relocation prior to dam removal and support the ecosystem recovery that motivates many dam removals.</p>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p>Allen, Brady M., Engle, Rod O., and Zendt, Joseph S. 2016. “Salmon and Steelhead in the White Salmon River after the Removal of Condit Dam–Planning Efforts and Recolonization Results.” <em>Fisheries</em> 41 (4): 190-203. <a class="reference external" href="https://doi.org/10.1080/03632415.2016.1150839">https://doi.org/10.1080/03632415.2016.1150839</a>.</p>
+<p>Bellmore, Ryan J., Pess, George R., and Duda, Jeffrey J. 2019. “Conceptualizing Ecological Responses to Dam Removal: If You Remove It, What’s to Come?” <em>Bioscience</em> 69 (1): 26-39. <a class="reference external" href="https://doi.org/10.1093/biosci/biy152">https://doi.org/10.1093/biosci/biy152</a>.</p>
+<p>“Lewis River.” <em>American Rivers</em>. <a class="reference external" href="https://www.americanrivers.org/river/lewis-river/">https://www.americanrivers.org/river/lewis-river/</a>.</p>
+<p>“White Salmon River.” <em>American Rivers</em>. <a class="reference external" href="https://www.americanrivers.org/river/white-salmon-river/">https://www.americanrivers.org/river/white-salmon-river/</a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+
+
+
+
+
+
+                <footer class="prev-next-footer d-print-none">
+
+<div class="prev-next-area">
+</div>
+                </footer>
+
+            </div>
+
+
+
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Dam Removal and Salmon Spawning Rates</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-knowledge">Prior Knowledge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-question">Causal question</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-was-the-effect-of-condit-dam-s-removal-on-the-size-of-the-white-salmon-river-s-salmon-population">What was the effect of Condit Dam’s Removal on the size of the White Salmon River’s salmon population?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#design">Design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-strategy">Study strategy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">Assumptions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#covariates">Covariates</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation">Estimation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-cleaning-dataset">Importing and Cleaning Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-parallel-trends">Visualizing Parallel Trends</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diff-in-diff-estimates">Diff-in-Diff Estimates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear Regression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-results">Linear Regression Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-way-fixed-effects-model">Two-Way Fixed Effects Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-way-fixed-effects-regression-results">Two-Way Fixed Effects Regression Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">Interpretation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+
+
+          </div>
+          <footer class="bd-footer-content">
+
+<div class="bd-footer-content__inner container">
+
+  <div class="footer-item">
+
+<p class="component-author">
+By Kathryn Spencer
+</p>
+
+  </div>
+
+  <div class="footer-item">
+
+
+  <p class="copyright">
+
+      © Copyright 2023.
+      <br/>
+
+  </p>
+
+  </div>
+
+  <div class="footer-item">
+
+  </div>
+
+  <div class="footer-item">
+
+  </div>
+
+</div>
+          </footer>
+
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
