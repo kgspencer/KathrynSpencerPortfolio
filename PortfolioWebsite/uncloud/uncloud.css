@@ -1,16 +1,16 @@
 @import "../portfolio.css";
 
 body {
-  background-color: brown;
-  color: blanchedalmond;
+  background-color: #d5ddf6;
+  color:#344474;
 }
 
 header, nav > a, a, h1 a {
-  color: blanchedalmond;
+  color: #344474;
 }
 
 #cursor {
-  background-color: blanchedalmond;
+  background-color: #344474;
 }
 
 h2 {
@@ -19,6 +19,7 @@ h2 {
 
 main p {
   font-size: 20px;
+  padding: 20px 0px 0px 0px;
 }
 
 .link {
