@@ -112,7 +112,7 @@ nav > a.underlined {
 img {
   width: 400px;
   height: 404px;
-  margin: 100px 50px 0px 0px;
+  margin: 100px 50px 50px 0px;
   position: absolute;
 }
 
@@ -133,10 +133,6 @@ img:hover {
   opacity: 0;
 }
 
-.principle article{
-  margin: 50px;
-}
-
 h2 {
   margin-bottom: 15px;
   font-size: 42px;
@@ -148,23 +144,27 @@ h2 {
   line-height: 120%;
 }
 
-.ekphrasis a {
+a {
   color: black;
   text-decoration: none;
 }
 
-.ekphrasis article {
+article {
   border: solid black;
-  margin-left: 0px;
+  margin: 50px 0px 50px 0px;
   padding: 15px 20px 15px 20px;
 }
 
-.ekphrasis h3 {
+#HCI article{
+  margin-right: 50px;
+}
+
+h3 {
   font-size: 34px;
   margin: 10px 10px 10px 0px;
 }
 
-.ekphrasis h4, p {
+h4, p {
   margin: 10px 0px 10px 0px;
 }
 
@@ -181,4 +181,25 @@ h2 {
 
 #aboutPage p {
   margin-bottom: 20px;
+}
+
+#feature {
+  margin-top: 75px;
+  transition: background-color 0.3s;
+}
+
+#feature:hover {
+  background-color: black;
+}
+
+#feature a {
+  transition: color 0.3s;
+}
+
+#feature:hover > a {
+  color: #F8F0EB;
+}
+
+#feature p {
+  font-size: 18px;
 }
